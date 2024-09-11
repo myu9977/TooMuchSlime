@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Deactivate()
     {
-        
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Activate(Vector2 position)
     {
-        
+        transform.position = position;
+        gameObject.SetActive(true);
     }
 }
