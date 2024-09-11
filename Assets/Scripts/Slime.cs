@@ -14,4 +14,12 @@ public class Slime : MonoBehaviour
         transform.position = position;
         gameObject.SetActive(true);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Deactivate();
+        }
+    }
 }
