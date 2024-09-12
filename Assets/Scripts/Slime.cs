@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
+    private DefaultSlimeHealth slimeHealth;
+    private SlimeAttack slimeAttack;
+
+    private void Start()
+    {
+        slimeHealth = GetComponent<DefaultSlimeHealth>();
+        slimeAttack = GetComponent<SlimeAttack>();
+    }
+
     public void Deactivate()
     {
         gameObject.SetActive(false);
@@ -19,6 +28,12 @@ public class Slime : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(slimeAttack.attackDamage);
+            }
+
             Deactivate();
         }
     }

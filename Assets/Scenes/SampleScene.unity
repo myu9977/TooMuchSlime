@@ -332,7 +332,8 @@ MonoBehaviour:
   spawnPointPrefab: {fileID: 8395068324645795162, guid: 68853138f4ed72d4c8541b1cf0454113, type: 3}
   rows: 5
   cols: 5
-  spacing: 1.1
+  rowSpacing: 1.1
+  colSpacing: 2.1
   spawnProbability: 0.3
   background1: {fileID: 1641820799}
   background2: {fileID: 1515456145}
@@ -623,6 +624,9 @@ GameObject:
   - component: {fileID: 2076124076}
   - component: {fileID: 2076124079}
   - component: {fileID: 2076124080}
+  - component: {fileID: 2076124082}
+  - component: {fileID: 2076124081}
+  - component: {fileID: 2076124083}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -722,6 +726,44 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2076124081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076124075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb05bb397a6ee74ebf740e566cab761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &2076124082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076124075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecf7ae1204fb93479f3b7a231a5356c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 0
+--- !u!114 &2076124083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076124075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2995a99a0be390b4dac98f1b08319095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
